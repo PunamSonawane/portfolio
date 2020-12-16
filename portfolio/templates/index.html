@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+{% include 'slider.html' %}
+<div class="jumbotron">
+  <h1 class="text-center">Home page</h1>
+  <p>Name:{{ name }}</p>
+  <p>Age:{{ age }}</p>
+  <p>Phone:{{ phone }}
+
+    <ul class='list'>
+      {% for row in friend_name %}
+      <li class='list-item'>{{ row }}</li>
+      {% endfor %}
+    </ul>
+</div>
+{% endblock %}
